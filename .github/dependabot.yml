@@ -1,0 +1,14 @@
+# Dependabot: daily bumps for the GitHub Actions pins in .github/workflows/ (repo-template file).
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    cooldown:
+      default-days: 3
+    commit-message:
+      prefix: "chore"
+    ignore:
+      # Interim (dev-env#229): our -vX.Y.Z tags let Dependabot propose an older tag.
+      - dependency-name: "smartwatermelon/github-workflows*"
